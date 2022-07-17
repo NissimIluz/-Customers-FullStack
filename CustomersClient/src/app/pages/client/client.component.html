@@ -1,0 +1,62 @@
+<div class="customer-data">
+  <div class="hello">
+    <p class="name"> שלום {{customerData.firstName}} {{customerData.lastName}}</p>
+    <p class="address">{{customerData.address.street}} {{customerData.address.number}}, {{customerData.address.city}} {{customerData.address.zipCode}}</p>
+  </div>
+  <div class="action-buttons">
+    <button (click)="accordion.openAll()">הצג הכול</button>
+    <button (click)="accordion.closeAll()">הסתר הכול</button>
+  </div>
+  <div class="logout">
+  <button (click)="logout()">יציאה</button>
+</div>
+</div>
+
+<mat-accordion class="accordion" multi dir="rtl">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <h2>כתובת</h2>
+      </mat-panel-title>
+      <mat-panel-description>
+        ערכיה והצגת כתובת המשתמש
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+   <app-update-address *ngIf="customerData.address" [addressData]="customerData.address" (onUpdate)="updateAddress($event)"></app-update-address>
+   <div class="error-conainer" *ngIf="updateMessage" (click)="updateMessage=''">
+    <span class="error-message" [ngClass]="{'success': success, 'failed': !success}">{{updateMessage}}</span>
+  </div>
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <h2>רשימת מנויים </h2>
+      </mat-panel-title>
+      <mat-panel-description>
+        רשימת מנויים תחת הלקוח
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-accordion class="contract-list" multi dir="rtl">
+      <mat-expansion-panel *ngFor="let contract of customerData.contractList">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           {{contract.contractName}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{contract.contractId}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-contract *ngIf="contract" [contract]="contract"></app-contract>
+      </mat-expansion-panel>
+
+
+    </mat-accordion>
+
+  </mat-expansion-panel>
+
+
+</mat-accordion>

@@ -1,0 +1,21 @@
+// override material paginator
+::ng-deep.mat-paginator{
+  .mat-paginator-container{
+   justify-content:center;
+   }
+
+  // override material paginator page switch
+  .mat-paginator-range-label{
+    order:2;
+   }
+
+  .mat-paginator-navigation-previous{
+    order:1;
+   }
+  .mat-paginator-navigation-next{
+    order:3;
+   }
+  }
+  table{
+    width: 100%;
+  }

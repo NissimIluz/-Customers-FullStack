@@ -1,0 +1,130 @@
+.customer-data{
+  padding: 7px 24px 5px 10px;
+  background: radial-gradient(#bba719, transparent);
+  background: url(https://static.vecteezy.com/system/resources/previews/004/968/002/original/cute-abstract-modern-background-free-vector.jpg);
+  direction: rtl;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hello {
+    .name{
+      font-size: 23px;
+    }
+
+  }
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    padding-bottom: 20px;
+    button{
+      font-size: 15px;
+      color: #0072ff;
+      background: rgb(182 221 231 / 31%);
+      border-radius: 9px;
+      padding: 12px;
+      margin-top: 90px;
+    }
+  }
+
+  .logout{
+    button{
+      font-size: 20px;
+      color: red;
+      background: #d19e9ead;
+      border-radius: 9px;
+      padding: 12px;
+    }
+  }
+}
+
+
+.headers-align .mat-expansion-panel-header-title,
+.headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+
+  .accordion{
+      mat-expansion-panel{
+        background-color: rgb(252, 235, 205);
+        margin: 20px 0;
+        }
+      background-color: rgb(252, 235, 205);
+      .mat-expansion-panel-header{
+        transition: all 2s ease;
+        background-color: rgb(252, 235, 205);
+      }
+
+      .mat-expanded {
+        .mat-expansion-panel-header{
+          background-color: rgb(235, 197, 132);
+        }
+      }
+  }
+  .address-form{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    .input-conainer {
+
+      .label {
+        display: block;
+      }
+    }
+  }
+  .update-bth{
+    font-size: 20px;
+    padding: 10px 32px;
+  }
+.error-conainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .error-message{
+    margin: 0 auto;
+    font-size: 30px;
+    border-radius: 26px;
+    padding: 12px 40px;
+  }
+  .success {
+    background: #63db63;
+    color: #034203;
+    box-shadow: 0 0 14px 2px #355e28;
+  }
+  .failed{
+    background: #db6e63;
+    color: #420303;
+    box-shadow: 0 0 14px 2px #5e2828;
+  }
+}
+.contract-list{
+  mat-expansion-panel{
+    background-color: rgb(252, 235, 205);
+    margin: 10px 0;
+    }
+  background-color: rgb(252, 235, 205);
+  .mat-expansion-panel-header{
+    transition: all 2s ease;
+    background-color: rgb(252, 235, 205);
+  }
+  .mat-expansion-panel-header:hover {
+    background-color: rgba(231, 64, 42, 0.795) !important;
+  }
+  .mat-expanded {
+    .mat-expansion-panel-header{
+      background-color: rgba(231, 155, 42, 0.795) !important;
+    }
+  }
+}

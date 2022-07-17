@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="enter">
+        <div>
+            <h1 id="Welcome" class="welcome">Welcome</h1>
+        </div>
+            <div id="form" class="form">
+                <form [formGroup]="userFormData">
+                        <h2 label class="label" [ngClass]="class">For login enter your ID</h2> <br />
+                        <input #idInput id="userID" class="input" type="number" formControlName="userID" placeholder="ID number" /> <br />
+                        <p class="warning-label">
+                            {{InvalidMassageID}}
+                        </p>
+                        <button id="submit" type="submit" class="submit-btn" (click)="loggin()"
+                        [disabled]="userFormData.invalid">ENTER</button>
+                </form>
+            </div>
+    </div>
+</div> 

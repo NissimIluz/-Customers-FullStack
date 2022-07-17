@@ -1,0 +1,20 @@
+<form [formGroup]="address" class="address-form" dir="rtl">
+
+  <div class="input-conainer" [ngClass]="{'invalid': !address.controls['city'].valid}">
+    <label class="label" for="city">עיר:</label>
+    <input #city id="city" class="input" type="text" formControlName="city" placeholder="אנא אכנס עיר"/>
+  </div>
+  <div class="input-conainer" [ngClass]="{'invalid': !address.controls['street'].valid}">
+    <label class="label" for="street">רחוב:</label>
+    <input #street id="street" class="input" type="text" formControlName="street" placeholder="אנא אכנס רחוב"/>
+  </div>
+  <div class="input-conainer" [ngClass]="{'invalid': !address.controls['number'].valid}">
+    <label class="label" for="number">מספר בית:</label>
+    <input #number id="number" class="input" type="number" formControlName="number" placeholder="אנא אכנס מספר בית"/>
+  </div>
+  <div class="input-conainer"  [ngClass]="{'invalid': !address.controls['zipCoed'].valid}">
+    <label class="label" for="zipCoed">מיקוד:</label>
+    <input #zipCoed id="zipCoed" class="input" type="text" formControlName="zipCoed" placeholder="אנא אכנס מיקוד"/>
+  </div>
+  <button class="update-bth" (click)="updateAddress()">שמור</button>
+</form>

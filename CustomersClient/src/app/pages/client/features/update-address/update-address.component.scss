@@ -1,0 +1,38 @@
+.accordion{
+  mat-expansion-panel{
+    background-color: rgb(252, 235, 205);
+    margin: 20px 0;
+    }
+  background-color: rgb(252, 235, 205);
+  .mat-expansion-panel-header{
+    transition: all 2s ease;
+    background-color: rgb(252, 235, 205);
+  }
+
+  .mat-expanded {
+    .mat-expansion-panel-header{
+      background-color: rgb(235, 197, 132);
+    }
+  }
+}
+.address-form{
+padding: 20px 0;
+display: flex;
+justify-content: space-around;
+.input-conainer {
+
+  .label {
+    display: block;
+  }
+}
+}
+.update-bth{
+font-size: 20px;
+padding: 10px 32px;
+}
+.invalid{
+  .input {
+    border: 2px solid red;
+  }
+  color: red;
+}

@@ -1,0 +1,32 @@
+<div>
+  <table mat-table [dataSource]="contract.packagesList" class="mat-elevation-z8" matSort #sort="matSort" >
+
+    <ng-container matColumnDef="packageType">
+      <th mat-header-cell *matHeaderCellDef> מזהה סוג חבילה </th>
+      <td mat-cell *matCellDef="let element"> {{element.packageType}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="packageName">
+      <th mat-header-cell *matHeaderCellDef> שם חבילה </th>
+      <td mat-cell *matCellDef="let element"> {{element.packageName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="packageQuantity">
+      <th mat-header-cell *matHeaderCellDef> כמות </th>
+      <td mat-cell *matCellDef="let element"> {{element.packageQuantity}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="packageBalance">
+      <th mat-header-cell *matHeaderCellDef> יתרה </th>
+      <td mat-cell *matCellDef="let element"> {{element.packageBalance}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5]"></mat-paginator>
+
+
+</div>
